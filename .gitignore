@@ -8,3 +8,6 @@ Thumbs.db
 
 _site/
 node_modules/
+
+ajournal/*.js
+*.js
