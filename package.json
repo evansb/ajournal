@@ -5,7 +5,7 @@
     "main": "_site/ajournal.min.js",
     "script": {
         "new" : "node _site/ajournal.min.js new",
-        "update" "node _site/ajournal.min.js update"  
+        "update" : "node _site/ajournal.min.js update"  
     },
     "repository": {
         "type" : "git",
