@@ -1,12 +1,8 @@
 {
     "name" : "ajournal",
     "version" : "0.0.1",
-    "description": "A minimal, static, plugin driven, single page blog generator",
-    "main": "_site/ajournal.min.js",
-    "script": {
-        "new" : "node _site/ajournal.min.js new",
-        "update" : "node _site/ajournal.min.js update"  
-    },
+    "description": "A minimal, static, extensible, task driven, site generator",
+    "main": "./ajournal/ajournal.js",
     "repository": {
         "type" : "git",
         "url" : "https://github.com/evansb/ajournal" 
@@ -16,9 +12,8 @@
         "static"
     ],
     "dependencies": {
-        "backbone": "1.1.2",
-        "markdown": "0.5.0",
-        "jquery": "2.1.1"
+        "underscore": "1.6.0",
+        "markdown": "0.5.0"
     },
     "devDependencies": {
         "grunt" : "0.4.5",

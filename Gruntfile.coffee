@@ -1,26 +1,29 @@
 
 module.exports = (grunt) ->
     fs = require 'fs'
-
-    grunt.initConfig 
+    grunt.initConfig
         pkg: grunt.file.readJSON 'package.json'
         coffee:
-            options:
-                join: true
-                bare: true
-            all:
-                'Gruntfile.js': 'Gruntfile.coffee'
-                '_site/ajournal.js': 'ajournal/**/*.coffee'
+            compile:
+                options:
+                    expand: true
+                    bare: true
+                files:
+                    'Gruntfile.js': 'Gruntfile.coffee'
+                    './ajournal/ajournal.js': [
+                        './ajournal/core/*.coffee'
+                        './ajournal/plugin/*.coffee'
+                        './ajournal/*.coffee'
+                    ]
         coffeelint:
             options:
-                force: true
-            all:
-                'Gruntfile.js': 'Gruntfile.coffee'
-                '_site/ajournal.js': 'ajournal/**/*.coffee'
+                indentation:
+                    value: 4
+            all: [ 'Gruntfile.coffee', './ajournal/**/*.coffee']
         uglify:
             dist:
                 files:
-                    '_site/ajournal.min.js' : ['_site/ajournal.js']
+                    './ajournal/ajournal.min.js' : ['./ajournal/ajournal.js']
 
     npmTasks = [
         'grunt-contrib-coffee',
@@ -31,4 +34,6 @@ module.exports = (grunt) ->
     for task in npmTasks
         grunt.loadNpmTasks task
 
-    grunt.registerTask 'default' , ['coffeelint:all', 'coffee:all', 'uglify']
+    grunt.registerTask 'default' , ['coffeelint:all', 'coffee:compile','uglify']
+
+# vim: ts=4 sw=4 et
