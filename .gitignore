@@ -6,8 +6,10 @@
 ehthumbs.db
 Thumbs.db
 
-_site/
+_site/*
+post/*
+template/*
 node_modules/
 
-ajournal/*.js
 *.js
+.ajournal/

@@ -10,7 +10,7 @@ Plugin =
     name: 'plugin'
     dependencies: ['template', 'underscore_template']
     run: (site, error) ->
-        console.log "Starting misc. plugin"
+
 module.exports = Plugin
 
 # vim: ts=4 sw=4 et

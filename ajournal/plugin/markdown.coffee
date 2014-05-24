@@ -8,13 +8,14 @@
 Markdown =
     name: 'markdown'
     dependencies: ['compile']
-    isMarkdownFile: (post) -> post.matter.type = 'markdown'
+    isMarkdownFile: (post) -> post.matter.type is 'markdown'
     run: (site, error) ->
         _ = require 'underscore'
         markdown = (require 'markdown').markdown
-        if not markdown? then throw error + 'markdown.js not installed
+        if not markdown? then error.throw 'markdown.js not installed
             ,please install with npm'
         for post in _.filter site.posts, @isMarkdownFile
+            error.log "'" + post.matter.title + "'"+ " converted to HTML"
             post.content = markdown.toHTML post.data
 
 module.exports = Markdown

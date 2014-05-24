@@ -1,11 +1,14 @@
 {
     "name" : "ajournal",
     "version" : "0.0.1",
-    "description": "A minimal, static, extensible, task driven, site generator",
-    "main": "./ajournal/ajournal.js",
+    "description": "A minimal task driven static site generator",
+    "main": "./.ajournal/ajournal.js",
     "repository": {
         "type" : "git",
         "url" : "https://github.com/evansb/ajournal" 
+    },
+    "script" : {
+        "start" : "node ./.ajournal/start.js"
     },
     "keywords": [
         "blog",
@@ -16,11 +19,10 @@
         "markdown": "0.5.0"
     },
     "devDependencies": {
+        "rootpath": "*",
         "grunt" : "0.4.5",
-        "grunt-contrib-uglify" : "0.4.0",
         "grunt-contrib-coffee" : "0.10.1",
         "grunt-coffeelint": "0.0.10"
     },
-    "license": "MIT",
-    "private": "true"
+    "license": "MIT"
 }

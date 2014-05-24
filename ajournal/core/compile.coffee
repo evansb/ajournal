@@ -13,7 +13,7 @@ Compile =
             + '-' + date.getFullYear() + '-'
 
     verify: (matter, error) ->
-        matter.title? or error "Please provide title on matter"
+        matter.title? or error.throw "Please provide title on matter"
         if matter.date is 'now' then matter.date = @datify new Date
         matter.author = matter.author or "Anonymous"
         return matter
@@ -24,8 +24,8 @@ Compile =
         for line in lines
             words = line.split ':'
             if words.length isnt 2
-                console.log "Format: <variable>:<content>"
-                error "Parse error in front matter"
+                error.throw "Format: <variable>:<content> +
+                Parse error in front matter"
             else
                 matter_object[words[0]] = words[1]
          return @verify matter_object, error
@@ -35,10 +35,11 @@ Compile =
         posts = []
         fs = require 'fs'
         for dir in site.post_dir
-            dir = '../' + dir
+            dir = './' + dir
             f = fs.readdirSync dir
             for file in f
                 path = dir + '/' + file
+                error.log "Parsing #{path}"
                 matter = '' ; post_data  = ''
                 data = fs.readFileSync path, site.encoding
                 splitted = data.split '\n---\n'

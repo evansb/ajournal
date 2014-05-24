@@ -1,6 +1,8 @@
 title:Example
 date:now
 layout:test
+type:markdown
+folder:drug
 ---
 
 # Is this the real world

@@ -10,7 +10,7 @@ Template =
     name: 'template'
     dependencies: ['compile', 'markdown']
     run: (site, error) ->
-        console.log 'Starting template parsing'
+
 module.exports = Template
 
 # vim: ts=4 sw=4 et
