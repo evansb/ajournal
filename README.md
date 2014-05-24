@@ -18,15 +18,16 @@ content
 2. Every posts should be stored in one folder as defined in **config.json**.
 Each post consist of front-matter and content. At least , you will need
 
-	title:A Silent Voice
-	author:Evan Sebastian
-	layout:blog
-    type:markdown
-	---
-    This is the content, which will be stored in field 'content' during
-    template rendering
-    There should not be any space between the colon, and the number of dashes in the
-    end should be exactly three.
+
+		title:A Silent Voice
+		author:Evan Sebastian
+		layout:blog
+    	type:markdown
+		---
+    	This is the content, which will be stored in field 'content' during
+    	template rendering
+    	There should not be any space between the colon, and the number of dashes in the
+    	end should be exactly three.
 
 3. Likewise, template should be stored in one folder as defined in
 **config.json**
