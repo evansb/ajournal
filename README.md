@@ -14,7 +14,15 @@ content
 
 ##How to Use
 
-1. Open **config.json** to modify global site-related configuration.
+1. Open **config.json** to modify global site-related configuration. Here is an example (without the comments, obviously)
+
+		{
+    		"title" : "test site", // Title of your site
+    		"author" : "Evan Sebastian", // Your name, appear on post.matter.author
+    		"output" : "_site",  // Where the base directory of .html should be kept
+    		"post_dir" : ["post"], // Where the posts are located
+    		"task_dir" : [ "core", "plugin"] // Plugin folders (e.g ./.ajournal/core)
+		}
 2. Every posts should be stored in one folder as defined in **config.json**.
 Each post consist of front-matter and content. At least , you will need
 

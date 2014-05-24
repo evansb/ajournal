@@ -1,8 +1,7 @@
 {
-    // Those are mandatory fields
-    "title" : "test site",          // Title of your site
-    "author" : "Evan Sebastian",    // Your name, appear on post.matter.author
-    "output" : "_site",            // Where the base directory of .html should be kept
-    "post_dir" : ["post"],        // Where the posts are located
-    "task_dir" : [ "core", "plugin"] // Plugin folders (e.g ./.ajournal/core)
+    "title" : "test site", 
+    "author" : "Evan Sebastian",
+    "output" : "_site",            
+    "post_dir" : ["post"],
+    "task_dir" : [ "core", "plugin"] 
 }
