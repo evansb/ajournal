@@ -1,9 +1,8 @@
 {
-    "title" : "test site",
-    "author" : "Evan Sebastian",
-    "output" : "_site",
-    "markup_ext" : ["md", "markdown"],
-    "template_ext": ["html"],
-    "post_dir" : ["post"],
-    "task_dir" : [ "core", "plugin"]
+    // Those are mandatory fields
+    "title" : "test site",          // Title of your site
+    "author" : "Evan Sebastian",    // Your name, appear on post.matter.author
+    "output" : "_site",            // Where the base directory of .html should be kept
+    "post_dir" : ["post"],        // Where the posts are located
+    "task_dir" : [ "core", "plugin"] // Plugin folders (e.g ./.ajournal/core)
 }

@@ -1,9 +1,0 @@
-{
-    "title" : "test site",
-    "author" : "Evan Sebastian",
-    "output" : "_site",
-    "markup_ext" : ["md", "markdown"],
-    "template_ext": ["html"],
-    "post_dir" : ["post"],
-    "task_dir" : [ "core", "plugin"]
-}
