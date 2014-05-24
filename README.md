@@ -75,10 +75,10 @@ dependency errors.
 
 2. To build the site
 
-        node .ajournal/start.js
+        grunt && node .ajournal/start.js
 
 3. If you are not going to write any plugin, just remove grunt,
-grunt-contrib-coffee, and grunt-coffelint
+grunt-contrib-coffee, and grunt-coffelint.
 
 # License
 MIT
